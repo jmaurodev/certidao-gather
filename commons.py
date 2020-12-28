@@ -38,17 +38,6 @@ def tcu(cnpj, app_type='pdf'):
         progress_bar.close()
 
 
-def siafi():
-    response = requests.get(
-        env_vars['URL_SIAFI'] + cnpj,
-        verify=False,
-        stream=True,
-        headers={
-            'Accept': 'application/' + app_type
-        }
-    )
-
-
 def _promt_user(cnpj):
     while True:
         buffer = input('Digite o CNPJ da empresa (apenas números): ')
