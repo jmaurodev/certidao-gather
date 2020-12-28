@@ -41,13 +41,15 @@ def login(host, username, password):
         }
     )
     r = session.get(
-        'http://%s/sped/protocolo/redacao/RedigirAction.do?method=novo' % (host),
+        'http://%s/sped/protocolo/redacao/RedigirAction.do?method=novo' % (
+            host),
         data={
             'method': 'novo'
         }
     )
     r = session.post(
-        'http://%s/sped/protocolo/redacao/eb/RedigirDiexSimplesAction.do?method=roteadorEdicao' % (host),
+        'http://%s/sped/protocolo/redacao/eb/RoteadorRedigirAction.do?method=roteadorEdicao' % (
+            host),
         data={
             'tipoVinculo': '',
             'numero': 'auto',
